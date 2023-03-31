@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <main>
+    <header>
+      <img src="./images/logo.svg" alt="Logo" class="logo mx-auto">
+    </header>
+    <section>
+      <div class="lg:container">
+        <h1 class="hidden">Tip Calculator App</h1>
+        <form action="">
+          <div class="form-control">
+            <label for="bill">Bill</label>
+            <input type="number" id="bill">
+          </div>
+          <div class="select-tip-wrap">
+            <p>Select Tip %</p>
+            <div class="grid grid-cols-2 lg:grid-cols-3">
+              <buttton>5%</buttton>
+              <buttton>10%</buttton>
+              <buttton>15%</buttton>
+              <buttton>20%</buttton>
+              <buttton>25%</buttton>
+              <input type="number" placeholder="Custom" id="custom-tip">
+            </div>
+          </div>
+          <div class="form-control">
+            <label for="people">Number of People</label>
+            <input type="number" id="people" placeholder="0">
+          </div>
+        </form>
+        <div class="right-side">
+          <div class="tip-amount-persons">
+            <div class="label-wrap">
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <div class="price">
+              <p>$<span id="price-person-amount">4.27</span></p>
+            </div>
+          </div>
+          <div class="total-wrap">
+            <div class="label-wrap">
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <div class="price">
+              <p>$<span id="price-total">32.79</span></p>
+            </div>
+          </div>
+          <button id="reset">
+            Reset
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+</body>
+</html>
