@@ -432,11 +432,12 @@ video {
 
 body{
   font-family: 'Space Mono', monospace;
-  font-size: 1.5rem;
+  font-size: 1rem;
   --tw-bg-opacity: 1;
   background-color: hsl(185 41% 84% / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(186 14% 43% / var(--tw-text-opacity));
+  color: hsl(184 14% 56% / var(--tw-text-opacity));
+  font-weight: 700;
 }
 
 h1{
@@ -447,6 +448,12 @@ h1{
 h2{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+@media (min-width: 1024px){
+  body{
+    font-size: 1.5rem;
+  }
 }
 
 *, ::before, ::after{
@@ -556,6 +563,18 @@ h2{
   margin-top: 3rem;
 }
 
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mb-2\.5{
+  margin-bottom: 0.625rem;
+}
+
+.block{
+  display: block;
+}
+
 .flex{
   display: flex;
 }
@@ -566,6 +585,10 @@ h2{
 
 .hidden{
   display: none;
+}
+
+.w-full{
+  width: 100%;
 }
 
 .grid-cols-2{
@@ -580,22 +603,12 @@ h2{
   justify-content: center;
 }
 
-.rounded-3xl{
-  border-radius: 1.5rem;
-}
-
 .rounded{
   border-radius: 0.25rem;
 }
 
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-light-grayish-cyan{
-  --tw-bg-opacity: 1;
-  background-color: hsl(185 41% 84% / var(--tw-bg-opacity));
+.rounded-3xl{
+  border-radius: 1.5rem;
 }
 
 .bg-very-light-grayish-cyan{
@@ -603,8 +616,37 @@ h2{
   background-color: hsl(189 41% 97% / var(--tw-bg-opacity));
 }
 
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-8{
   padding: 2rem;
+}
+
+.px-\[18px\]{
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.py-\[15px\]{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-very-dark-cyan{
+  --tw-text-opacity: 1;
+  color: hsl(183 100% 15% / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px){

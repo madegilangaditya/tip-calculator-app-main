@@ -12,14 +12,21 @@
     }
     body{
         font-family: 'Space Mono', monospace;
-        font-size: 1.5rem;
+        font-size: 1rem;
         @apply bg-light-grayish-cyan;
-        @apply text-dark-grayish-cyan;
+        @apply text-grayish-cyan;
+        font-weight: 700;
     }
     h1 {
       @apply text-2xl;
     }
     h2 {
       @apply text-xl;
+    }
+
+    @media screen(lg){
+        body{
+          font-size: 1.5rem;
+      }
     }
   }
