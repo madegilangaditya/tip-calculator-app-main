@@ -19,46 +19,46 @@
       <div class="lg:container bg-white mx-auto rounded-3xl p-8">
         <h1 class="hidden">Tip Calculator App</h1>
         <form action="">
-          <div class="form-control">
-            <label for="bill" class="mb-2.5 block">Bill</label>
+          <div class="form-control mb-8">
+            <label for="bill" class="mb-2.5 block text-base">Bill</label>
             <input type="number" id="bill" class="bg-very-light-grayish-cyan rounded block w-full px-[18px] py-3 text-right text-very-dark-cyan" placeholder="0">
           </div>
-          <div class="select-tip-wrap">
-            <p>Select Tip %</p>
-            <div class="grid grid-cols-2 lg:grid-cols-3">
-              <buttton>5%</buttton>
-              <buttton>10%</buttton>
-              <buttton>15%</buttton>
-              <buttton>20%</buttton>
-              <buttton>25%</buttton>
-              <input type="number" placeholder="Custom" id="custom-tip">
+          <div class="select-tip-wrap mb-8">
+            <p class="mb-4 text-base">Select Tip %</p>
+            <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+              <button class="rounded bg-very-dark-cyan text-very-light-grayish-cyan text-center p-2.5 hover:bg-light-grayish-cyan hover:text-very-dark-cyan">5%</button>
+              <button class="rounded bg-very-dark-cyan text-very-light-grayish-cyan text-center p-2.5 hover:bg-light-grayish-cyan hover:text-very-dark-cyan">10%</button>
+              <button class="rounded bg-very-dark-cyan text-very-light-grayish-cyan text-center p-2.5 hover:bg-light-grayish-cyan hover:text-very-dark-cyan">15%</button>
+              <button class="rounded bg-very-dark-cyan text-very-light-grayish-cyan text-center p-2.5 hover:bg-light-grayish-cyan hover:text-very-dark-cyan">20%</button>
+              <button class="rounded bg-very-dark-cyan text-very-light-grayish-cyan text-center p-2.5 hover:bg-light-grayish-cyan hover:text-very-dark-cyan">25%</button>
+              <input type="number" placeholder="Custom" id="custom-tip" class="bg-very-light-grayish-cyan rounded block w-full p-2.5 text-right text-very-dark-cyan">
             </div>
           </div>
-          <div class="form-control">
-            <label for="people">Number of People</label>
-            <input type="number" id="people" placeholder="0">
+          <div class="form-control mb-8">
+            <label for="people" class="text-base">Number of People</label>
+            <input type="number" id="people" placeholder="0" class="bg-very-light-grayish-cyan rounded block w-full px-[18px] py-2.5 text-right text-very-dark-cyan">
           </div>
         </form>
-        <div class="right-side">
-          <div class="tip-amount-persons">
-            <div class="label-wrap">
-              <p>Tip Amount</p>
-              <p>/ person</p>
+        <div class="right-side bg-very-dark-cyan rounded-xl p-5">
+          <div class="tip-amount-persons flex justify-between items-center mb-6">
+            <div class="label-wrap mt-6">
+              <p class="text-base text-very-light-grayish-cyan">Tip Amount</p>
+              <p class="text-sm">/ person</p>
             </div>
             <div class="price">
-              <p>$<span id="price-person-amount">4.27</span></p>
+              <p class="text-strong-cyan text-3xl">$<span id="price-person-amount">4.27</span></p>
             </div>
           </div>
-          <div class="total-wrap">
+          <div class="total-wrap flex justify-between items-center mb-6">
             <div class="label-wrap">
-              <p>Total</p>
-              <p>/ person</p>
+              <p class="text-base text-very-light-grayish-cyan">Total</p>
+              <p class="text-sm">/ person</p>
             </div>
             <div class="price">
-              <p>$<span id="price-total">32.79</span></p>
+              <p class="text-strong-cyan text-3xl">$<span id="price-total">32.79</span></p>
             </div>
           </div>
-          <button id="reset">
+          <button id="reset" class="rounded-lg text-very-dark-cyan  text-center p-2.5 bg-strong-cyan hover:bg-light-grayish-cyan w-full">
             Reset
           </button>
         </div>

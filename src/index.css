@@ -12,7 +12,7 @@
     }
     body{
         font-family: 'Space Mono', monospace;
-        font-size: 1rem;
+        font-size: 1.5rem;
         @apply bg-light-grayish-cyan;
         @apply text-grayish-cyan;
         font-weight: 700;
