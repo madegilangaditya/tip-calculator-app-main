@@ -450,6 +450,11 @@ h2{
   line-height: 1.75rem;
 }
 
+input[type='number']:focus,
+  input[type='number']:focus-visible{
+  outline-color: hsl(172, 67%, 45%);
+}
+
 @media (min-width: 1024px){
   body{
     font-size: 1.5rem;
@@ -571,6 +576,10 @@ h2{
   margin-bottom: 1rem;
 }
 
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
 .mb-8{
   margin-bottom: 2rem;
 }
@@ -581,14 +590,6 @@ h2{
 
 .mt-6{
   margin-top: 1.5rem;
-}
-
-.mb-7{
-  margin-bottom: 1.75rem;
-}
-
-.mb-6{
-  margin-bottom: 1.5rem;
 }
 
 .block{
@@ -639,12 +640,17 @@ h2{
   border-radius: 1.5rem;
 }
 
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
 .rounded-xl{
   border-radius: 0.75rem;
 }
 
-.rounded-lg{
-  border-radius: 0.5rem;
+.bg-strong-cyan{
+  --tw-bg-opacity: 1;
+  background-color: hsl(172 67% 45% / var(--tw-bg-opacity));
 }
 
 .bg-very-dark-cyan{
@@ -662,15 +668,6 @@ h2{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-strong-cyan{
-  --tw-bg-opacity: 1;
-  background-color: hsl(172 67% 45% / var(--tw-bg-opacity));
-}
-
-.p-8{
-  padding: 2rem;
-}
-
 .p-2{
   padding: 0.5rem;
 }
@@ -683,14 +680,13 @@ h2{
   padding: 1.25rem;
 }
 
+.p-8{
+  padding: 2rem;
+}
+
 .px-\[18px\]{
   padding-left: 18px;
   padding-right: 18px;
-}
-
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .py-2{
@@ -703,6 +699,11 @@ h2{
   padding-bottom: 0.625rem;
 }
 
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -711,14 +712,14 @@ h2{
   text-align: right;
 }
 
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .text-sm{
@@ -726,9 +727,9 @@ h2{
   line-height: 1.25rem;
 }
 
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-strong-cyan{
+  --tw-text-opacity: 1;
+  color: hsl(172 67% 45% / var(--tw-text-opacity));
 }
 
 .text-very-dark-cyan{
@@ -741,9 +742,15 @@ h2{
   color: hsl(189 41% 97% / var(--tw-text-opacity));
 }
 
-.text-strong-cyan{
-  --tw-text-opacity: 1;
-  color: hsl(172 67% 45% / var(--tw-text-opacity));
+#bill,
+#people{
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 20px;
+}
+
+#people{
+  background-image: url(../images/icon-person.svg);
 }
 
 @media (min-width: 1024px){
@@ -780,11 +787,6 @@ h2{
       max-width: 1536px;
     }
   }
-}
-
-.hover\:bg-strong-cyan:hover{
-  --tw-bg-opacity: 1;
-  background-color: hsl(172 67% 45% / var(--tw-bg-opacity));
 }
 
 .hover\:bg-light-grayish-cyan:hover{
