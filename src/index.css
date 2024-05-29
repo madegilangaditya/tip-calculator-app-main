@@ -46,3 +46,7 @@
 #people{
   background-image: url(../images/icon-person.svg);
 }
+
+.select-tip-wrap button.active{
+  @apply bg-strong-cyan text-very-dark-cyan;
+}

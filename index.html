@@ -16,7 +16,7 @@
       <img src="./images/logo.svg" alt="Logo" class="logo mx-auto mt-12 mb-10">
     </header>
     <section>
-      <div class="lg:container bg-white mx-auto rounded-3xl p-8">
+      <div class="lg:container bg-white mx-auto rounded-3xl p-8 lg:grid-cols-2 lg:gap-12 lg:p-8 lg:grid lg:max-w-[920px]">
         <h1 class="hidden">Tip Calculator App</h1>
         <form action="">
           <div class="form-control mb-8">
@@ -39,14 +39,14 @@
             <input type="number" id="people" placeholder="0" class="bg-very-light-grayish-cyan rounded block w-full px-[18px] py-2.5 text-right text-very-dark-cyan">
           </div>
         </form>
-        <div class="right-side bg-very-dark-cyan rounded-xl p-5">
-          <div class="tip-amount-persons flex justify-between items-center mb-6">
-            <div class="label-wrap mt-6">
+        <div class="right-side bg-very-dark-cyan rounded-xl p-5 lg:p-10 lg:flex lg:flex-col">
+          <div class="tip-amount-persons flex justify-between items-center mb-6 lg:mb-14">
+            <div class="label-wrap mt-6 lg:mt-0">
               <p class="text-base text-very-light-grayish-cyan">Tip Amount</p>
               <p class="text-sm">/ person</p>
             </div>
             <div class="price">
-              <p class="text-strong-cyan text-3xl">$<span id="price-person-amount">4.27</span></p>
+              <p class="text-strong-cyan text-3xl lg:text-5xl">$<span id="price-person-amount">4.27</span></p>
             </div>
           </div>
           <div class="total-wrap flex justify-between items-center mb-6">
@@ -55,10 +55,10 @@
               <p class="text-sm">/ person</p>
             </div>
             <div class="price">
-              <p class="text-strong-cyan text-3xl">$<span id="price-total">32.79</span></p>
+              <p class="text-strong-cyan text-3xl lg:text-5xl">$<span id="price-total">32.79</span></p>
             </div>
           </div>
-          <button id="reset" class="rounded-lg text-very-dark-cyan  text-center p-2.5 bg-strong-cyan hover:bg-light-grayish-cyan w-full">
+          <button id="reset" class="rounded-lg text-very-dark-cyan  text-center p-2.5 bg-strong-cyan hover:bg-light-grayish-cyan w-full lg:mt-auto">
             Reset
           </button>
         </div>

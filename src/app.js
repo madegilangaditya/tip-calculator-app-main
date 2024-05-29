@@ -11,8 +11,6 @@ tipBtn.forEach((item) =>{
         item.parentElement.querySelectorAll('button').forEach((ite) => {
             removeActive(ite);
         })
-        console.log(item.parentElement);
-        
         tipBtnClick(e, item);
     });
 })
