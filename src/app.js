@@ -28,6 +28,7 @@ tipBtn.forEach((item) =>{
         if ((item.classList.contains('active') || customTip.value !== '') && (people.value !== '' && people.value != 0)) {
             console.log(bill.value);
             tipPerson(bill.value, tipValue, people.value);
+            tipTotalPerson(bill.value, tipValue, people.value);
         }
     })
 })
@@ -51,7 +52,16 @@ function tipPerson(bill, tip, person){
     let tipFloat = parseFloat(tip);
     let personInt = parseInt(person);
     let total = (billFloat * (tipFloat/100))/personInt;
-    pricePersonAmount.textContent = total;
+    pricePersonAmount.textContent = total.toFixed(2);
+    console.log(total);
+}
+
+function tipTotalPerson(bill, tip, person){
+    let billFloat = parseFloat(bill);
+    let tipFloat = parseFloat(tip);
+    let personInt = parseInt(person);
+    let total = (billFloat + (billFloat * (tipFloat/100)))/personInt;
+    priceTotal.textContent = total.toFixed(2);
     console.log(total);
 }
 
