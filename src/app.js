@@ -1,5 +1,3 @@
-console.log('masuk');
-
 const bill = document.querySelector('#bill');
 const people = document.querySelector('#people');
 const tipBtn = document.querySelectorAll('.select-tip-wrap button');
@@ -10,7 +8,6 @@ const reset = document.querySelector('#reset');
 let tipValue = 0;
 
 tipBtn.forEach((item) =>{
-    // console.log(item);
     item.addEventListener('click', (e) => {
         item.parentElement.querySelectorAll('button').forEach((ite) => {
             removeActive(ite);
@@ -80,8 +77,6 @@ people.addEventListener("input", function(){
 
 function tipBtnClick(e){
     e.preventDefault();
-    console.log(e.target);
-   
     e.target.classList.add('active');
     tipValue = e.target.textContent;
 }
@@ -91,7 +86,6 @@ function removeActive(item){
 }
 
 function tipPerson(bill, tip, person){
-    console.log('test person');
     let billFloat = parseFloat(bill);
     let tipFloat = parseFloat(tip);
     let personInt = parseInt(person);
