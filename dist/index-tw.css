@@ -573,6 +573,10 @@ input[type='number']:focus,
   --tw-backdrop-sepia:  ;
 }
 
+.relative{
+  position: relative;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -776,6 +780,17 @@ input[type='number']:focus,
   background-color: hsl(172 67% 45% / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: hsl(183 100% 15% / var(--tw-text-opacity));
+}
+
+#people.error{
+  outline: 1px solid #b67b6d;
+}
+
+.error-text{
+  color: #b67b6d;
+  position: absolute;
+  right: 0;
+  top: 9px;
 }
 
 @media (min-width: 1024px){

@@ -50,3 +50,14 @@
 .select-tip-wrap button.active{
   @apply bg-strong-cyan text-very-dark-cyan;
 }
+
+#people.error{
+  outline: 1px solid #b67b6d;
+}
+
+.error-text{
+  color: #b67b6d;
+  position: absolute;
+  right: 0;
+  top: 9px;
+}

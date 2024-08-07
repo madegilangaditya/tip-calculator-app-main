@@ -6,6 +6,7 @@ const tipBtn = document.querySelectorAll('.select-tip-wrap button');
 const customTip = document.querySelector('#custom-tip');
 const pricePersonAmount = document.querySelector('#price-person-amount');
 const priceTotal = document.querySelector('#price-total');
+const reset = document.querySelector('#reset');
 let tipValue = 0;
 
 tipBtn.forEach((item) =>{
@@ -14,14 +15,22 @@ tipBtn.forEach((item) =>{
         item.parentElement.querySelectorAll('button').forEach((ite) => {
             removeActive(ite);
         })
+
+        
         tipBtnClick(e, item);
-        console.log(tipValue);
+        if ((item.classList.contains('active') || customTip.value !== '') && (people.value !== '' && people.value != 0)) {
+            tipPerson(bill.value, tipValue, people.value);
+            tipTotalPerson(bill.value, tipValue, people.value);
+        }
     });
 
     customTip.addEventListener("input", function(){
         removeActive(item);
         tipValue = customTip.value;
-        console.log(tipValue);
+        if ((item.classList.contains('active') || customTip.value !== '') && (people.value !== '' && people.value != 0)) {
+            tipPerson(bill.value, tipValue, people.value);
+            tipTotalPerson(bill.value, tipValue, people.value);
+        }
     })
 
     bill.addEventListener("input", function(){
@@ -31,9 +40,45 @@ tipBtn.forEach((item) =>{
             tipTotalPerson(bill.value, tipValue, people.value);
         }
     })
+
+    people.addEventListener("input", function(){
+        if ((item.classList.contains('active') || customTip.value !== '') && (people.value !== '' && people.value != 0)) {
+            tipPerson(bill.value, tipValue, people.value);
+            tipTotalPerson(bill.value, tipValue, people.value);
+        }
+    })
+
+    reset.addEventListener('click', function(){
+        item.parentElement.querySelectorAll('button').forEach((ite) => {
+            removeActive(ite);
+        });
+        bill.value = '';
+        people.value = '';
+        customTip.value = '';
+        pricePersonAmount.textContent = 0;
+        priceTotal.textContent = 0;
+    })
 })
 
-function tipBtnClick(e, item){
+people.addEventListener("input", function(){
+    if(people.value == 0 ){
+        this.classList.add('error');
+        if(!this.parentElement.querySelector('.error-text')){
+            const para = document.createElement("p");
+            para.classList.add('error-text', 'text-base')
+            para.innerText = "Can't be zero";
+            this.parentElement.appendChild(para);
+        }
+        
+    }else{
+        this.classList.remove('error');
+        if(this.parentElement.querySelector('.error-text')){
+            this.parentElement.querySelector('.error-text').remove();
+        }
+    }
+})
+
+function tipBtnClick(e){
     e.preventDefault();
     console.log(e.target);
    
@@ -42,7 +87,6 @@ function tipBtnClick(e, item){
 }
 
 function removeActive(item){
-    // console.log(item.parent);
     item.classList.remove('active');
 }
 
@@ -52,8 +96,13 @@ function tipPerson(bill, tip, person){
     let tipFloat = parseFloat(tip);
     let personInt = parseInt(person);
     let total = (billFloat * (tipFloat/100))/personInt;
-    pricePersonAmount.textContent = total.toFixed(2);
-    console.log(total);
+    let totalString = total.toString();
+    let decimalPart = totalString.split('.')[1];
+    if (decimalPart && decimalPart.length > 2) {
+        pricePersonAmount.textContent = total.toFixed(2);
+    } else {
+        pricePersonAmount.textContent = total;
+    }
 }
 
 function tipTotalPerson(bill, tip, person){
@@ -61,7 +110,12 @@ function tipTotalPerson(bill, tip, person){
     let tipFloat = parseFloat(tip);
     let personInt = parseInt(person);
     let total = (billFloat + (billFloat * (tipFloat/100)))/personInt;
-    priceTotal.textContent = total.toFixed(2);
-    console.log(total);
+    let totalString = total.toString();
+    let decimalPart = totalString.split('.')[1];
+    if (decimalPart && decimalPart.length > 2) {
+        priceTotal.textContent = total.toFixed(2);
+    } else {
+        priceTotal.textContent = total;
+    }
 }
 
